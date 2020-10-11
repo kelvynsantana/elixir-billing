@@ -13,6 +13,13 @@ defmodule Billing do
     billing
   end
 
+  @doc"""
+    When recieve `billings` returns a billings array's ordered
+      ## Examples
+      iex> Billing.orderBilling(Billing.createBilling(["Tellphone", "Credit Card", "Services"]))
+      ["Credit Card", "Services", "Tellphone"]
+  """
+
   def orderBilling(billings) do
     Enum.sort(billings)
   end
